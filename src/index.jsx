@@ -17,6 +17,7 @@ import ContextClass from './Context/Class';
 import ContextFunc from './Context/Function';
 import LifecycleClass from './Lifecycle/Class';
 import LifecycleFunc from './Lifecycle/Function';
+import Memo from './Memo/Function';
 import CustomHook from './CustomHooks/Function';
 
 
@@ -33,6 +34,7 @@ ReactDOM.render(
           <li><Link to="/contextFunc">Context Func</Link></li>
           <li><Link to="/lifecycleClass">Lifecycle Class</Link></li>
           <li><Link to="/lifecycleFunc">Lifecycle Func</Link></li>
+          <li><Link to="/memo">Memo</Link></li>
           <li><Link to="/customHook">Custom Hook</Link></li>
         </ul>
       </nav>
@@ -45,6 +47,7 @@ ReactDOM.render(
         <Route exact path="/contextFunc" component={ContextFunc} />
         <Route exact path="/lifecycleClass" component={() => <LifecycleClass name="John" />} />
         <Route exact path="/lifecycleFunc" component={() => <LifecycleFunc name="John" />} />
+        <Route exact path="/memo" component={Memo} />
         <Route exact path="/customHook" component={() => <CustomHook name="John" />} />
       </Switch>
     </NameContext.Provider>
